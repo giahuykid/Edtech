@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+
+  backend:
+    image:  huy1412/edtech-be:latest
+    container_name: backend_v.1.0.0
+    ports:
+      - "8080:8080"
+
+
+  frontend:
+    image: huy1412/edtech-fe:v2.0.0
+    container_name: front
+
+    depends_on:
+      - backend
+    ports:
+      - "80:80"
