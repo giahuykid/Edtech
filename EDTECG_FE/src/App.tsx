@@ -5,6 +5,7 @@ import { Box, Container } from '@mui/material';
 
 import Navigation from './components/layout/Navigation';
 import env from './config/env';
+import authService from './services/authService';
 
 import CreateFlashcardCollection from './components/CreateFlashcardCollection';
 import FlashcardCollection from './components/FlashcardCollection';
@@ -16,6 +17,19 @@ import QuizDisplay from './components/QuizDisplay';
 import QuizList from './components/QuizList';
 import { FileResponse } from './services/fileService';
 import HomePage from './pages/HomePage';
+import LoginPage from './pages/LoginPage';
+import AuthTest from './components/AuthTest';
+
+// Protected Route Component
+const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const isAuthenticated = authService.isAuthenticated();
+  
+  if (!isAuthenticated) {
+    return <Navigate to="/login" replace />;
+  }
+  
+  return <>{children}</>;
+};
 
 function App() {
     const [isUploadDialogOpen, setIsUploadDialogOpen] = useState(false);
@@ -61,15 +75,53 @@ function App() {
                     }}
                 >
                     <Routes>
-                        <Route path="/" element={<HomePage />} />
-                        <Route path="/create-flashcard" element={<CreateFlashcardCollection />} />
-                        <Route path="/collection/:id" element={<FlashcardCollection />} />
-                        <Route path="/files" element={<FilesPage />} />
-                        <Route path="/flashcards" element={<FlashcardCollectionList />} />
-                        <Route path="/create-quiz" element={<QuizForm onQuizCreated={setMockId} />} />
-                        <Route path="/quiz/:mockId" element={<QuizDisplay mockId={mockId || 0} />} />
-                        <Route path="/quizzes" element={<QuizList />} />
-                        <Route path="/mocks" element={<QuizList />} />
+                        <Route path="/login" element={<LoginPage />} />
+                        <Route path="/auth-test" element={<AuthTest />} />
+                        <Route path="/" element={
+                            <ProtectedRoute>
+                                <HomePage />
+                            </ProtectedRoute>
+                        } />
+                        <Route path="/create-flashcard" element={
+                            <ProtectedRoute>
+                                <CreateFlashcardCollection />
+                            </ProtectedRoute>
+                        } />
+                        <Route path="/collection/:id" element={
+                            <ProtectedRoute>
+                                <FlashcardCollection />
+                            </ProtectedRoute>
+                        } />
+                        <Route path="/files" element={
+                            <ProtectedRoute>
+                                <FilesPage />
+                            </ProtectedRoute>
+                        } />
+                        <Route path="/flashcards" element={
+                            <ProtectedRoute>
+                                <FlashcardCollectionList />
+                            </ProtectedRoute>
+                        } />
+                        <Route path="/create-quiz" element={
+                            <ProtectedRoute>
+                                <QuizForm onQuizCreated={setMockId} />
+                            </ProtectedRoute>
+                        } />
+                        <Route path="/quiz/:mockId" element={
+                            <ProtectedRoute>
+                                <QuizDisplay mockId={mockId || 0} />
+                            </ProtectedRoute>
+                        } />
+                        <Route path="/quizzes" element={
+                            <ProtectedRoute>
+                                <QuizList />
+                            </ProtectedRoute>
+                        } />
+                        <Route path="/mocks" element={
+                            <ProtectedRoute>
+                                <QuizList />
+                            </ProtectedRoute>
+                        } />
                         <Route path="*" element={<Navigate to="/flashcards" replace />} />
                     </Routes>
                 </Container>

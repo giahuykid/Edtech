@@ -22,8 +22,12 @@ import {
     Home as HomeIcon,
     Collections as CollectionsIcon,
     Add as AddIcon,
+    Quiz as QuizIcon,
+    Folder as FolderIcon,
+    Logout as LogoutIcon,
 } from '@mui/icons-material';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import authService from '../../services/authService';
 
 const Navigation = () => {
     const theme = useTheme();
@@ -34,8 +38,16 @@ const Navigation = () => {
 
     const menuItems = [
         { text: 'Home', icon: <HomeIcon />, path: '/' },
-
+        { text: 'Flashcards', icon: <CollectionsIcon />, path: '/flashcards' },
+        { text: 'Create Flashcard', icon: <AddIcon />, path: '/create-flashcard' },
+        { text: 'Quizzes', icon: <QuizIcon />, path: '/quizzes' },
+        { text: 'Create Quiz', icon: <AddIcon />, path: '/create-quiz' },
+        { text: 'Files', icon: <FolderIcon />, path: '/files' },
     ];
+
+    const handleLogout = () => {
+        authService.logout();
+    };
 
     const renderDrawerContent = () => (
         <Box sx={{ width: 250 }}>
@@ -56,6 +68,14 @@ const Navigation = () => {
                         </ListItemButton>
                     </ListItem>
                 ))}
+                <ListItem disablePadding>
+                    <ListItemButton onClick={handleLogout}>
+                        <ListItemIcon>
+                            <LogoutIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Logout" />
+                    </ListItemButton>
+                </ListItem>
             </List>
         </Box>
     );
@@ -132,6 +152,20 @@ const Navigation = () => {
                                     </Button>
                                 );
                             })}
+                            <Button
+                                startIcon={<LogoutIcon />}
+                                color="inherit"
+                                variant="text"
+                                onClick={handleLogout}
+                                sx={{
+                                    textTransform: 'none',
+                                    '&:hover': {
+                                        backgroundColor: theme.palette.action.hover
+                                    }
+                                }}
+                            >
+                                Logout
+                            </Button>
                         </Box>
                     )}
                 </Toolbar>

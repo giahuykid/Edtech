@@ -127,7 +127,7 @@ const FlashcardCollection: React.FC = () => {
         </Alert>
         <Button
           variant="outlined"
-          onClick={() => navigate('/')}
+          onClick={() => navigate('/flashcards')}
           sx={{ mt: 2 }}
         >
           Back to Collections
@@ -144,7 +144,7 @@ const FlashcardCollection: React.FC = () => {
         </Alert>
         <Button
           variant="outlined"
-          onClick={() => navigate('/')}
+          onClick={() => navigate('/flashcards')}
           sx={{ mt: 2 }}
         >
           Back to Collections
@@ -162,7 +162,7 @@ const FlashcardCollection: React.FC = () => {
           </Typography>
           <Button
             variant="outlined"
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/flashcards')}
           >
             Back to Collections
           </Button>
