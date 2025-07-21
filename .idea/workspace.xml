@@ -4,66 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e779216-da02-454a-831d-3f3444e0e633" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/EDTECG_FE.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AUTHENTICATION_README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/api.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nginx.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ApiTest.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AuthForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AuthTest.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CreateFlashcard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CreateFlashcardCollection.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/EditFlashcard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/FileList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/FileUpload.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/FileUploadButton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/FileUploadDialog.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/FlashcardCollection.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/FlashcardCollectionList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MockList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/QuizDisplay.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/QuizForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/QuizList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/Navigation.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/api.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/env.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/FilesPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/HomePage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/LoginPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/react-app-env.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reportWebVitals.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/MockService.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/authService.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/fileService.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/flashcardService.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/setupTests.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/theme.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-    </list>
+    <list default="true" id="0e779216-da02-454a-831d-3f3444e0e633" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
